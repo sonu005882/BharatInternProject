@@ -1,0 +1,39 @@
+* {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: lightsalmon;
+}
+header {
+  background-color: aqua;
+}
+h1 {
+  background-color: rgb(rgb(23, 2, 20), green, blue);
+  color: rgb(0, 2, 0);
+  padding: 10px;
+  text-align: center;
+}
+h2 {
+  color: blue;
+}
+.abc {
+  background-color: orange;
+  color: blueviolet;
+}
+.content {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+textarea {
+  color: lightseagreen;
+}
+body {
+  background-color: #273d3b;
+}

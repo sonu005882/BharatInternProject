@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Full Stack Web Development</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Full Stack Web Development By BharatIntern</h1>
+    </header>
+    <div class="content">
+      <h2>Add Text</h2>
+      <textarea
+        id="textArea"
+        rows="4"
+        cols="50"
+        placeholder="Enter your text here"
+      ></textarea>
+
+      <h2>Add Images</h2>
+      <input type="file" id="imageInput" />
+      <img
+        id="imagePreview"
+        src="#"
+        alt="Preview Image"
+        style="display: none"
+      />
+
+      <h2>Add Videos</h2>
+      <input type="file" id="videoInput" />
+      <video id="videoPreview" controls style="display: none">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+
+    <script>
+      const imageInput = document.getElementById("imageInput");
+      const imagePreview = document.getElementById("imagePreview");
+      const videoInput = document.getElementById("videoInput");
+      const videoPreview = document.getElementById("videoPreview");
+
+      imageInput.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+          imagePreview.style.display = "block";
+          imagePreview.src = URL.createObjectURL(file);
+        }
+      });
+
+      videoInput.addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        if (file) {
+          videoPreview.style.display = "block";
+          videoPreview.src = URL.createObjectURL(file);
+        }
+      });
+    </script>
+  </body>
+</html>
